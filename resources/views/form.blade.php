@@ -14,75 +14,63 @@
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
   </head>
 
-  <body>  
+  <body>
     <section class="container">
-      <header>
-        <a href="#" class="logo">Landing<span>Laptop</span></a>
-    
-        <ul class="navlist">
-          <li><a href="/">Home</a></li>
-          <li><a href="/form">Gtww</a></li>
-        </ul>
-    
-        <div class="icons">
-          <a href="#"><i class='bx bx-search-alt-2'></i></a>
-        </div>
-      </header>
-      <form action="#" class="form">
-        <div class="input-box">
-          <label>Full Name</label>
-          <input type="text" placeholder="Enter full name" required />
-        </div>
-
-        <div class="input-box">
-          <label>Purposes</label>
-          <input type="text" placeholder="Enter purposes" required />
-        </div>
-
-        <div class="column">
-          <div class="input-box">
-            <label>NIS</label>
-            <input type="number" placeholder="Enter nis number" required />
-          </div>
-
-          <div class="column">
+        <form action="#" class="form">
             <div class="input-box">
-              <label>Rayon</label>
-              <input type="text" placeholder="Enter rayon" required />
-            </div>
-            
-        <div class="teacher-box">
-          <h3>Teacher</h3>
-          <div class="teacher-option">
-            <div class="teacher">
-              <input type="radio" id="check-teacher" name="teacher" checked />
-              <label for="check-other">Fema</label>
-              <input type="radio" id="check-teacher" name="teacher" checked />
-              <label for="check-other">David</label>
-              <input type="radio" id="check-teacher" name="teacher" checked />
-              <label for="check-other">Rio</label>
-              <input type="radio" id="check-teacher" name="teacher" checked />
-              <label for="check-other">Riska</label>
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter full name" required />
             </div>
 
-        <div class="input-box rombel">
-          <label>Rombel </label>
-          <div class="column">
-            <div class="select-box">
-              <select>
-                <option hidden>please select</option>
-                <option>PPLG 1</option>
-                <option>PPLG 2</option>
-                <option>PPLG 3</option>
-                <option>PPLG 4</option>
-                <option>PPLG 5</option>
-              </select>
+            <div class="input-box">
+                <label>Purposes</label>
+                <input type="text" placeholder="Enter purposes" required />
             </div>
-        <button class="btn submit">Submit</button>
-    
-      </form>
+
+            <div class="column">
+                <div class="input-box">
+                    <label>NIS</label>
+                    <input type="number" placeholder="Enter nis number" required />
+                </div>
+
+                <div class="input-box">
+                    <label>Rayon</label>
+                    <input type="text" placeholder="Enter rayon" required />
+                </div>
+            </div>
+
+            <div class="teacher-box">
+                <h3>Teacher</h3>
+                <div class="teacher-option">
+                    <div class="teacher">
+                        <input type="radio" id="check-teacher" name="teacher" checked />
+                        <label for="check-other">Fema</label>
+                        <input type="radio" id="check-teacher" name="teacher" checked />
+                        <label for="check-other">David</label>
+                        <input type="radio" id="check-teacher" name="teacher" checked />
+                        <label for="check-other">Rio</label>
+                        <input type="radio" id="check-teacher" name="teacher" checked />
+                        <label for="check-other">Riska</label>
+                    </div>
+
+                    <div class="input-box rombel">
+                        <label>Rombel </label>
+                        <div class="column">
+                            <div class="select-box">
+                                <select>
+                                    <option hidden>please select</option>
+                                    <option>PPLG 1</option>
+                                    <option>PPLG 2</option>
+                                    <option>PPLG 3</option>
+                                    <option>PPLG 4</option>
+                                    <option>PPLG 5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn submit">Submit</button>
+            </div>
+        </form>
     </section>
-
-  </body>
-</html>
-
+@endsection

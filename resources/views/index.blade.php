@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	<title>LANDING LAPTOP</title>
 </head>
+
 <body>
 	 
 	<header>
@@ -30,17 +31,13 @@
 			<h5>Welcome!</h5>
 			<h1>Landing Laptop<br> <span>For</span> PPLG</h1>
             <br>
-				<a href="#" class="btn">BORROW</a>
-			</div>
-		</div>
-	</section>
+            <a href="#" class="btn">BORROW</a>
+        </div>
+        </div>
+    </section>
 
-	<div class="right">
-		<a href="#" class="scroll">Scroll Down<i class='bx bx-chevrons-down' ></i></a>
-	</div>
-
-	<!----custom js link--->
-	<script type="text/javascript" src="js/script.js"></script>
-
-</body>
-</html>
+    <div class="right">
+        <a href="#" class="scroll">Scroll Down<i class='bx bx-chevrons-down'></i></a>
+    </div>
+    </section>
+@endsection
