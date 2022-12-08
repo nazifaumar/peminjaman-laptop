@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\PelaController;
+use App\Http\Controllers\LaptopController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PelaController::class, 'index']);
-Route::get('/form', [PelaController::class, 'form']);
+Route::get('/', [LaptopController::class, 'index']);
+Route::get('/data', [LaptopController::class, 'data']);
+Route::get('/create', [LaptopController::class, 'create']);
+Route::post('/store', [LaptopController::class, 'store']);
+Route::patch('/done/{id}', [LaptopController::class, 'done']);
+Route::delete('/delete/{id}', [LaptopController::class, 'destroy']);
