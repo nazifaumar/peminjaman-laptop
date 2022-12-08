@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
   </head>
 
-  <body>
+  <body>  
     <section class="container">
       <header>
         <a href="#" class="logo">Landing<span>Laptop</span></a>
