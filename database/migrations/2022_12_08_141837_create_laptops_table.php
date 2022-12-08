@@ -18,7 +18,6 @@ return new class extends Migration
             $table->integer('nis');
             $table->string('name');
             $table->string('rayon');
-            $table->string('rombel');
             $table->string('purposes');
             $table->date('date');
             $table->date('return_date')->nullable();
