@@ -23,7 +23,7 @@ header{
 	padding: 20px 5%;
 }
 .logo{
-	color: #30679A;
+	color: #2a89db;
 	font-size: 15px;
 	font-weight: 800;
 }
@@ -34,7 +34,7 @@ span{
 	display: flex;
 }
 .navlist a{
-	color: #30679A;
+	color: #2a89db;
 	font-size: 15px;
 	font-weight: 500;
 	padding: 5px 5px;
@@ -43,8 +43,8 @@ span{
 	transition: all .40s ease;
 }
 .navlist a:hover{
-	color: #3d515c;
-	border-bottom: 2px solid #3d515c;
+	color: #96c6e7;
+	border-bottom: 2px solid #96c6e7;
 }
 .icons{
 	display: flex;
@@ -56,7 +56,7 @@ span{
 	justify-content: center;
 	height: 35px;
 	width: 35px;
-	background: #30679A;
+	background: #2a89db;
 	color: #fff;
 	font-size: 18px;
 	margin: 0 10px;
@@ -65,12 +65,12 @@ span{
 	transition: all .40s ease;
 }
 .icons i:hover{
-	border: 1px solid #30679A;
-	color: #30679A;
+	border: 1px solid #2a89db;
+	color: #2a89db;
 	background: transparent;
 }
 #menu-icon{
-	color: #30679A;
+	color: #2a89db;
 	font-size: 16px;
 	z-index: 10001;
 	cursor: pointer;
@@ -96,7 +96,7 @@ section{
 	margin: 15px 0;
 	font-size: 5.5rem;
 	font-weight: 800;
-	color: #30679A;
+	color: #2a89db;
 	letter-spacing: 2px;
 	line-height: 1.1;
 	text-transform: uppercase;
@@ -113,22 +113,22 @@ section{
 	line-height: 30px;
 	margin-bottom: 3rem;
 }
-.btn{
+#btn{
 	padding: 15px 35px;
 	color: #fff;
-	background: #30679A;
+	background: #2a89db;
 	font-size: 15px;
 	font-weight: 500;
 	border-radius: 15px;
 	border: 2px solid transparent;
 	transition: all .40s ease;
 }
-.btn:hover{
+#btn:hover{
 	background: transparent;
 	border: 2px solid #3d515c;
-	color: #30679A;
+	color: #2a89db;
 }
-.btn2:hover{
+#btn2:hover{
 	background: #3d515c;
 	color: #fff;
 }
@@ -143,7 +143,7 @@ section{
 	display: block;
 	margin: 28px 0;
 	font-size: 25px;
-	color: #30679A;
+	color: #2a89db;
 	transition: all .40s ease;
 }
 .left i:hover{
@@ -215,7 +215,7 @@ section{
 		justify-content: center;
 		height: 35px;
 		width: 35px;
-		background: #30679A;
+		background: #2a89db;
 		color: #fff;
 		font-size: 25px;
 		border-radius: 10px;
@@ -237,11 +237,11 @@ section{
 		padding: 0.5rem;
 		margin: 1.1rem;
 		border-bottom: none;
-		border-left: 2px solid #30679A;
+		border-left: 2px solid #2a89db;
 	}
 	.navlist a:hover{
 		border-bottom: none;
-		background: #30679A;
+		background: #2a89db;
 		color: #fff;
 	}
 	.navlist.open{
@@ -281,7 +281,7 @@ body {
   margin-top: 20px;
 }
 .input-box label {
-  color: #30679A;
+  color: #2a89db;
 }
 .form :where(.input-box input, .select-box) {
   position: relative;
@@ -322,13 +322,13 @@ body {
   column-gap: 5px;
 }
 .teacher input {
-	background-color: #30679A;
+	background-color: #2a89db;
 }
 .form :where(.teacher input, .teacher label) {
   cursor: pointer;
 }
 .teacher label {
-  color: #707070;
+  color: #96c6e7;
 }
 .rombel :where(input, .select-box) {
   margin-top: 2px;
@@ -338,7 +338,7 @@ body {
   width: 100%;
   outline: none;
   border: none;
-  color: #707070;
+  color: #96c6e7;
   font-size: 13px;
 }
 .form button {
@@ -353,12 +353,12 @@ body {
   border: none;
   cursor: pointer;
   transition: all 0.4s ease;
-  background-color: #30679A;
+  background-color: #2a89db;
 }
 .form button:hover {
 	background: transparent;
-	border: 2px solid #CFEEFF;
-	color: #30679A;
+	border: 2px solid #96c6e7;
+	color: #2a89db;
 }
 
 /*Responsive*/
