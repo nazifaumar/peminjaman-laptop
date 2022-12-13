@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="input-box">
-                    <label>Rayon</label>
+                    <label>Region</label>
                     <input type="text" placeholder="Enter rayon" name="rayon" value="{{ old('rayon') }}" />
                     @error('rayon')
                         <p class="text-danger fw-bold mt-2">
@@ -45,24 +45,6 @@
                 </div>
             </div>
 
-            {{-- <div class="input-box">
-                <label>Teacher</label>
-                <div class="column">
-                    <div class="select-box">
-                        <select name="teacher">
-                            <option hidden>please select</option>
-                            <option value="Fema">Fema</option>
-                            <option value="Riska">Riska</option>
-                            <option value="Rio">Rio</option>
-                        </select>
-                        @error('teacher')
-                            <p class="text-danger fw-bold mt-2">
-                                {{ $message }}
-                            </p>
-                        @enderror
-                    </div>
-                </div>
-            </div> --}}
             <div class="input-box">
                 <label>Teacher</label>
                 <input type="text" placeholder="Enter Teacher" name="teacher" value="{{ old('teacher') }}" />
@@ -73,26 +55,6 @@
                 @enderror
             </div>
 
-            {{-- <div class="input-box rombel">
-                <label>Rombel</label>
-                <div class="column">
-                    <div class="select-box">
-                        <select name="rombel">
-                            <option hidden>please select</option>
-                            <option value="PPLG 1">PPLG 1</option>
-                            <option value="PPLG 2">PPLG 2</option>
-                            <option value="PPLG 3">PPLG 3</option>
-                            <option value="PPLG 4">PPLG 4</option>
-                            <option value="PPLG 5">PPLG 5</option>
-                        </select>
-                        @error('rombel')
-                            <p class="text-danger fw-bold mt-2">
-                                {{ $message }}
-                            </p>
-                        @enderror
-                    </div>
-                </div>
-            </div> --}}
             <div class="input-box">
                 <label>Rombel</label>
                 <input type="text" placeholder="Enter Rombel" name="rombel" value="{{ old('rombel') }}" />
@@ -111,7 +73,7 @@
                     </p>
                 @enderror
             </div>
-            <button class="btn submit">Submit</button>
+            <button class="btn submit" id="btn">Submit</button>
         </form>
         <div hidden class="total">
             <h4 class="fw-bold fst-italic text-break mt-4 mx-3 text-white">Total</h4>
