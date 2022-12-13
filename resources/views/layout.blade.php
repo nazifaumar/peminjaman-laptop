@@ -15,22 +15,22 @@
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
     <link rel="shortcut icon" href="/img/rpl.png" type="image/x-icon">
 </head>
 
 <body>
     <header>
-        <a href="#" class="logo">Landing<span>Laptop</span></a>
+        <a href="#" class="logo text text-decoration-none">Landing<span>Laptop</span></a>
 
         <ul class="navlist">
-            <li><a href="/">Home</a></li>
-            <li><a href="/data">Landing</a></li>
-            <li><a href="/create">New</a></li>
+            <li><a href="/" class="text-decoration-none">Home</a></li>
+            <li><a href="/data" class="text-decoration-none">Landing</a></li>
         </ul>
 
         <div class="icons">
-            <a href="#"><i class='bx bx-search-alt-2'></i></a>
+            <a href="/create" class="text-decoration-none"><i class="fa-sharp fa-solid fa-circle-plus text-white "></i></a>
         </div>
     </header>
     @yield('container')
