@@ -17,6 +17,6 @@ class Laptop extends Model
         'keterangan',
         'date',
         'return_date',
-        'teacher'
+        'teacher',
     ];
 }
