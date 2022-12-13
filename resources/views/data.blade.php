@@ -1,45 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Landing Laptop</title>
-
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
-    <link rel="shortcut icon" href="/img/rpl.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-</head>
-
-<body>
-    <header>
-        <a href="#" class="logo">Landing<span>Laptop</span></a>
-
-        <ul class="navlist">
-            <li><a href="/">Home</a></li>
-            <li><a href="/data">Landing</a></li>
-            <li><a href="/create">New</a></li>
-        </ul>
-
-        <div class="icons">
-            <a href="#"><i class='bx bx-search-alt-2'></i></a>
-        </div>
-    </header>
+    @extends('layout')
+    @section('container')
+    
     <div class="gam mx-5">
         <table class="table table-striped table-bordered ">
             <tr>
-                <td>NIS</td>
+                <td>Nis</td>
                 <td>Name</td>
-                <td>Rayon</td>
+                <td>Region</td>
                 <td>Rombel</td>
                 <td>Purposes</td>
                 <td>Date</td>
@@ -54,37 +21,42 @@
                     <td>{{ $laptop['rayon'] }}</td>
                     <td>{{ $laptop['rombel'] }}</td>
                     <td>{{ $laptop['purposes'] }}</td>
+                    {{-- 
+                    F j, Y — January 15, 2019
+                    j.F.Y — 15.January.2019
+                    Y/m/d — 2019/01/15
+                    m/d/Y — 01/15/2019
+                    d-m-y — 15-01-2019
+                    y-m-d — 19-01-15 
+                    carbon parse untuk mengurai dan mengformat date atau tanggal--}}
                     <td>{{ \Carbon\Carbon::parse($laptop['date'])->format('j F, Y') }}</td>
+                    {{-- Kalau data return date kosong maka akan menampilkan Belum di Kembalikan --}}
                     @if ($laptop['return_date'] == null)
                         <td class="text-warning">Belum dikembalikan</td>
                     @else
+                    {{--Sedangkan kalao return date nya ada atau tidak null maka akan menampilkan tanggal dikembalikan--}}
                         <td class="text-warning">{{ \Carbon\Carbon::parse($laptop['return_date'])->format('j F, Y') }}
                         </td>
                     @endif
                     <td>{{ $laptop['teacher'] }}</td>
                     <td class="d-flex">
+                    {{-- kalau tanggal dikembalikannya kosong atau null maka akan menampilkan button kembalikan, ketika tanggal dikembalikannya ada
+                        maka tidak menampilkan apa apa --}}
                         @if ($laptop['return_date'] == null)
                             <form action="/done/{{ $laptop['id'] }}" method="POST">
                                 @csrf
                                 @method('patch')
-                                <button type="submit" class="btn btn-warning text-white"><i
-                                        class="bi bi-check2-all"></i></button>
+                                <button type="submit" class="btn btn-warning text-white" id="btn">Kembalikan</button>
                             </form>
                         @endif
                         <form action="/delete/{{ $laptop['id'] }}" method="POST">
                             @csrf
                             @method('delete')
-                            <button type="submit" class="btn btn-danger text-white me-2"><i
-                                    class="bi bi-eraser-fill"></i></button>
+                            <button type="submit" class="btn btn-danger text-white me-2" >Hapus</button>
                         </form>
                     </td>
                 </tr>
             @endforeach
         </table>
     </div>
-    <!----custom js link--->
-    <script type="text/javascript" src="js/script.js"></script>
-
-</body>
-
-</html>
+    @endsection
