@@ -22,15 +22,11 @@ return new class extends Migration
             $table->date('date');
             $table->date('return_date')->nullable();
             $table->string('teacher');
+            $table->string('rombel');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('laptops');
