@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Laptop;
 use Illuminate\Http\Request;
 
@@ -13,9 +12,11 @@ class LaptopController extends Controller
     }
 
 
-    public function data(Laptop $laptop)
+    public function data()
     {
+        // variabel laptops untuk menampilkan data laptop (model) semuanya (all)
         $laptops = Laptop::all();
+        // menampilkan tampilan data dan menyambungkan variabel laptops (compact('laptops'))
         return view('data', compact('laptops'));
     }
 
@@ -25,7 +26,6 @@ class LaptopController extends Controller
         $laptops = Laptop::all();
         return view('form', compact('laptops'));
     }
-
 
     public function done(Request $request, $id)
     {
