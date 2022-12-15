@@ -39,14 +39,14 @@
                         </td>
                     @endif
                     <td>{{ $laptop['teacher'] }}</td>
-                    <td class="d-flex">
+                    <td class="d-flex gap-2">
                     {{-- kalau tanggal dikembalikannya kosong atau null maka akan menampilkan button kembalikan, ketika tanggal dikembalikannya ada
                         maka tidak menampilkan apa apa --}}
                         @if ($laptop['return_date'] == null)
                             <form action="/done/{{ $laptop['id'] }}" method="POST">
                                 @csrf
                                 @method('patch')
-                                <button type="submit" class="btn btn-warning text-white" id="btn">Kembalikan</button>
+                                <button type="submit" class="btn btn-warning text-white">Kembalikan</button>
                             </form>
                         @endif
                         <form action="/delete/{{ $laptop['id'] }}" method="POST">
