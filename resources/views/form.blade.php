@@ -73,10 +73,11 @@
                     </p>
                 @enderror
             </div>
-            <button class="btn submit" id="btn">Submit</button>
+            <button class="btn submit" id="btn">Submit</button>  
         </form>
+        <br>
         <div class="total">
-            <h4 class="fw-bold fst-italic text-break mt-4 mx-3 text-black">Total</h4>
+            <h4 class="fw-bold text-break mt-4 mx-3 text-black">Total</h4>
             <hr>
             <table class="table" id="oiw">
                 <tr>
@@ -93,11 +94,6 @@
                     <td class="text-black" style="width: 60px">
                         <div class="pls px-2">
                             {{ $laptops->where('return_date', '=', null)->count() }}
-                        </div>
-                    </td>
-                    <td class="text-black">
-                        <div class="dkk">
-                            {{ \Carbon\Carbon::now()->format('j-m') }}
                         </div>
                     </td>
                 </tr>
@@ -117,11 +113,6 @@
                     <td class="text-black" style="width: 60px">
                         <div class="pls px-2">
                             {{ $laptops->where('return_date', '!=', null)->count() }}
-                        </div>
-                    </td>
-                    <td class="text-black">
-                        <div class="dkk">
-                            {{ \Carbon\Carbon::now()->format('j-m') }}
                         </div>
                     </td>
                 </tr>
