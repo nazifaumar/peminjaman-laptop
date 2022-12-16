@@ -75,48 +75,5 @@
             </div>
             <button class="btn submit" id="btn">Submit</button>  
         </form>
-        <br>
-        <div class="total">
-            <h4 class="fw-bold text-break mt-4 mx-3 text-black">Total</h4>
-            <hr>
-            <table class="table" id="oiw">
-                <tr>
-                    <td class="text-black" style="width: 20px"><i class="bi bi-box-arrow-in-right"
-                            style="font-size: 45px"></i></td>
-                    <td class="text-black" style="width: 300px">
-                        <div class="kon">
-                            <div class="fw-bold">
-                                Dipinjamkan
-                            </div>
-                            Total laptop yang dipinjamkan hari ini
-                        </div>
-                    </td>
-                    <td class="text-black" style="width: 60px">
-                        <div class="pls px-2">
-                            {{ $laptops->where('return_date', '=', null)->count() }}
-                        </div>
-                    </td>
-                </tr>
-            </table>
-            <table class="table" id="oiw">
-                <tr>
-                    <td class="text-black" style="width: 20px"><i class="bi bi-arrow-left-right"
-                            style="font-size: 45px"></i></td>
-                    <td class="text-black" style="width: 300px">
-                        <div class="kon">
-                            <div class="fw-bold">
-                                Dikembalikan
-                            </div>
-                            Total laptop yang dikembalikan hari ini
-                        </div>
-                    </td>
-                    <td class="text-black" style="width: 60px">
-                        <div class="pls px-2">
-                            {{ $laptops->where('return_date', '!=', null)->count() }}
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
     </section>
 @endsection
