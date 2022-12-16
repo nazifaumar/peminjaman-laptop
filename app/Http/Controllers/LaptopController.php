@@ -80,19 +80,19 @@ class LaptopController extends Controller
 
     public function show(Laptop $laptop)
     {
-        // gak usah pake ini juga gpp
+        
     }
 
 
     public function edit(Laptop $laptop)
     {
-        // gak usah pake ini juga gpp
+       
     }
 
 
     public function update(Request $request, Laptop $laptop)
     {
-        // gak usah pake ini juga gpp
+        
     }
 
 
