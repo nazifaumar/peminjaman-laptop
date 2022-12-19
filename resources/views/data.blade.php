@@ -1,8 +1,5 @@
     @extends('layout')
     @section('container')
-
-    
-
     
     <div class="gam mx-5">
         <div class="total">
@@ -47,7 +44,7 @@
                 </tr>
             </table>
         </div>
-        <br> 
+        <br>
         <table class="table table-striped table-bordered ">
             <tr>
                 <td>Nis</td>

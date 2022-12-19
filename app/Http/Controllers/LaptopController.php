@@ -4,9 +4,37 @@ namespace App\Http\Controllers;
 
 use App\Models\Laptop;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LaptopController extends Controller
 {
+    public function auth(Request $request)
+    {
+        $request->validate([
+            'username' => 'required|exist:users,username',
+            'password' => 'required',
+        ],[
+            'username.exists' => "This username doesn't exists"
+        ]);
+
+        $user = $request->only('username', 'password');
+        if (Auth::attempt($user)){
+            return redirect()->route('todo.index');
+        } else {
+            return redirect('/')->with('fail', "Gagal login");
+        }
+
+    }
+
+
+
+
+
+    public function login(){
+
+        return view('login');
+    }
+
     public function index()
     {
         // menampilkan index

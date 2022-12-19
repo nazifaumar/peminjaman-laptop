@@ -22,7 +22,7 @@
 
 <body>
     <header>
-        <a href="#" class="logo text text-decoration-none">Landing<span>Laptop</span></a>
+        <a href="/" class="logo text text-decoration-none">Landing<span>Laptop</span></a>
 
         <ul class="navlist">
             <li><a href="/" class="text-decoration-none">Home</a></li>
@@ -30,7 +30,7 @@
         </ul>
 
         <div class="icons">
-            <a href="/create" class="text-decoration-none"><i class="fa-sharp fa-solid fa-circle-plus text-white "></i></a>
+            <a href="/create" class="text-decoration-none"><i class="fa-sharp fa-solid fa-circle-plus"></i></a>
         </div>
     </header>
     @yield('container')

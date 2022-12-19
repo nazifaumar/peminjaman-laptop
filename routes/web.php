@@ -20,3 +20,4 @@ Route::get('/create', [LaptopController::class, 'create']);
 Route::post('/store', [LaptopController::class, 'store']);
 Route::patch('/done/{id}', [LaptopController::class, 'done']);
 Route::delete('/delete/{id}', [LaptopController::class, 'destroy']);
+Route::get('/login', [LaptopController::class, 'auth'])->name('login.auth');
