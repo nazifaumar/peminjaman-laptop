@@ -19,7 +19,7 @@ class LaptopController extends Controller
 
         $user = $request->only('username', 'password');
         if (Auth::attempt($user)){
-            return redirect()->route('todo.index');
+            return redirect()->route('/');
         } else {
             return redirect('/')->with('fail', "Gagal login");
         }

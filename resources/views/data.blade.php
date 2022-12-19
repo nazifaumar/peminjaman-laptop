@@ -1,15 +1,16 @@
     @extends('layout')
     @section('container')
-    
+    <body class="ol">
     <div class="gam mx-5">
         <div class="total">
-            <h4 class="fw-bold text-break mt-4 mx-3 text-black">Total</h4>
+            <br>
+            <h4 class="fw-bold text-break mt-4 mx-3 text-white">Total</h4>
             <hr>
             <table class="table" id="oiw">
                 <tr>
-                    <td class="text-black" style="width: 20px"><i class="bi bi-box-arrow-in-right"
+                    <td class="text-white" style="width: 20px"><i class="bi bi-box-arrow-in-right"
                             style="font-size: 45px"></i></td>
-                    <td class="text-black" style="width: 300px">
+                    <td class="text-white" style="width: 300px">
                         <div class="kon">
                             <div class="fw-bold">
                                 Dipinjamkan
@@ -17,7 +18,7 @@
                             Total laptop yang dipinjamkan hari ini
                         </div>
                     </td>
-                    <td class="text-black" style="width: 60px">
+                    <td class="text-white" style="width: 60px">
                         <div class="pls px-2">
                             {{ $laptops->where('return_date', '=', null)->count() }}
                         </div>
@@ -26,9 +27,9 @@
             </table>
             <table class="table" id="oiw">
                 <tr>
-                    <td class="text-black" style="width: 20px"><i class="bi bi-arrow-left-right"
+                    <td class="text-white" style="width: 20px"><i class="bi bi-arrow-left-right"
                             style="font-size: 45px"></i></td>
-                    <td class="text-black" style="width: 300px">
+                    <td class="text-white" style="width: 300px">
                         <div class="kon">
                             <div class="fw-bold">
                                 Dikembalikan
@@ -36,7 +37,7 @@
                             Total laptop yang dikembalikan hari ini
                         </div>
                     </td>
-                    <td class="text-black" style="width: 60px">
+                    <td class="text-white" style="width: 60px">
                         <div class="pls px-2">
                             {{ $laptops->where('return_date', '!=', null)->count() }}
                         </div>
@@ -45,25 +46,25 @@
             </table>
         </div>
         <br>
-        <table class="table table-striped table-bordered ">
+        <table class="table text-white table-striped table-bordered ">
             <tr>
-                <td>Nis</td>
-                <td>Name</td>
-                <td>Region</td>
-                <td>Rombel</td>
-                <td>Purposes</td>
-                <td>Date</td>
-                <td>Return Date</td>
-                <td>Teacher</td>
-                <td>Action</td>
+                <td class="text-white">Nis</td>
+                <td class="text-white">Name</td>
+                <td class="text-white">Region</td>
+                <td class="text-white">Rombel</td>
+                <td class="text-white">Purposes</td>
+                <td class="text-white">Date</td>
+                <td class="text-white">Return Date</td>
+                <td class="text-white">Teacher</td>
+                <td class="text-white">Action</td>
             </tr>
             @foreach ($laptops as $laptop)
                 <tr class="table-rows">
-                    <td>{{ $laptop['nis'] }}</td>
-                    <td>{{ $laptop['name'] }}</td>
-                    <td>{{ $laptop['rayon'] }}</td>
-                    <td>{{ $laptop['rombel'] }}</td>
-                    <td>{{ $laptop['purposes'] }}</td>
+                    <td class="text-white">{{ $laptop['nis'] }}</td>
+                    <td class="text-white">{{ $laptop['name'] }}</td>
+                    <td class="text-white">{{ $laptop['rayon'] }}</td>
+                    <td class="text-white">{{ $laptop['rombel'] }}</td>
+                    <td class="text-white">{{ $laptop['purposes'] }}</td>
                     {{-- 
                     F j, Y — January 15, 2019
                     j.F.Y — 15.January.2019
@@ -72,7 +73,7 @@
                     d-m-y — 15-01-2019
                     y-m-d — 19-01-15 
                     carbon parse untuk mengurai dan mengformat date atau tanggal--}}
-                    <td>{{ \Carbon\Carbon::parse($laptop['date'])->format('j F, Y') }}</td>
+                    <td class="text-white">{{ \Carbon\Carbon::parse($laptop['date'])->format('j F, Y') }}</td>
                     {{-- Kalau data return date kosong maka akan menampilkan Belum di Kembalikan --}}
                     @if ($laptop['return_date'] == null)
                         <td class="text-warning">Belum dikembalikan</td>
@@ -81,8 +82,8 @@
                         <td class="text-warning">{{ \Carbon\Carbon::parse($laptop['return_date'])->format('j F, Y') }}
                         </td>
                     @endif
-                    <td>{{ $laptop['teacher'] }}</td>
-                    <td class="d-flex gap-2">
+                    <td class="text-white">{{ $laptop['teacher'] }}</td>
+                    <td class="d-flex gap-2 text-white">
                     {{-- kalau tanggal dikembalikannya kosong atau null maka akan menampilkan button kembalikan, ketika tanggal dikembalikannya ada
                         maka tidak menampilkan apa apa --}}
                         @if ($laptop['return_date'] == null)
@@ -103,4 +104,5 @@
             @endforeach
         </table>
     </div>
+</body>
     @endsection

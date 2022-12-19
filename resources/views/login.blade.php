@@ -2,7 +2,7 @@
 @section('container')
 
 <div class="container d-flex justify-content-center align-items-center mt-5">
-    <form method="POST" action="" class="card py-4 px-4">
+    <form method="GET" action="{{route('index')}}" class="card py-4 px-4">
         @if (Session::get('fail'))
 <div class=" alert alert-danger">
     {{Session::get('fail')}}

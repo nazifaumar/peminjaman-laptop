@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LaptopController;
+use App\Models\Laptop;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,4 +21,5 @@ Route::get('/create', [LaptopController::class, 'create']);
 Route::post('/store', [LaptopController::class, 'store']);
 Route::patch('/done/{id}', [LaptopController::class, 'done']);
 Route::delete('/delete/{id}', [LaptopController::class, 'destroy']);
+Route::get('/login', [LaptopController::class, 'login'])->name('login');
 Route::get('/login', [LaptopController::class, 'auth'])->name('login.auth');

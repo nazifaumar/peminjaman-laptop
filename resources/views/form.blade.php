@@ -1,6 +1,8 @@
 @extends('layout')
 @section('container')
+<body class="ol">
     <section class="container">
+        <br>
         <form action="/store" class="form" method="POST">
             @csrf
             <div class="input-box">
@@ -76,4 +78,5 @@
             <button class="btn submit" id="btn">Submit</button>  
         </form>
     </section>
+</body>
 @endsection
