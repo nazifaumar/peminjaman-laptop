@@ -23,3 +23,6 @@ Route::patch('/done/{id}', [LaptopController::class, 'done']);
 Route::delete('/delete/{id}', [LaptopController::class, 'destroy']);
 Route::get('/login', [LaptopController::class, 'login'])->name('login');
 Route::get('/login', [LaptopController::class, 'auth'])->name('login.auth');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
