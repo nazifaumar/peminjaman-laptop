@@ -102,7 +102,7 @@
                 </tr>
                 
             @endforeach
-        </table>
+        </table>x
     </div>
 </body>
     @endsection
